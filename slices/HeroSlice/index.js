@@ -1,5 +1,6 @@
-import { PrismicLink, PrismicRichText } from '@prismicio/react'
 import BlurImage from '@/components/BlurImage'
+import { BiRightArrowAlt } from 'react-icons/bi'
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
 
 /**
  * @typedef {import("@prismicio/client").Content.HeroSliceSlice} HeroSliceSlice
@@ -21,21 +22,24 @@ const HeroSlice = ({ slice }) => (
           <PrismicRichText field={slice.primary.description} />
         </div>
       </div>
-      <div className="flex gap-2">
-        {slice.items.map((item) => {
-          return (
-            <PrismicLink
-              key={item.cta_link}
-              field={item.cta_link}
-              className="text-sm bg-zinc-200 py-2 px-4 font-semibold rounded-full hover:bg-zinc-300 text-zinc-700"
-            >
-              {item.cta_text}
-            </PrismicLink>
-          )
-        })}
-      </div>
+      {slice.items.length && (
+        <div className="flex gap-2">
+          {slice.items.map((item) => {
+            return (
+              <PrismicLink
+                key={item.cta_link}
+                field={item.cta_link}
+                className="text-sm bg-zinc-200 py-2 px-4 font-semibold rounded-full hover:bg-zinc-300 text-zinc-700"
+              >
+                {item.cta_text}
+              </PrismicLink>
+            )
+          })}
+        </div>
+      )}
     </div>
   </section>
+  // <pre>{JSON.stringify(slice, null, 2)}</pre>
 )
 
 export default HeroSlice

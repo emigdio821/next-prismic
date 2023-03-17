@@ -1,4 +1,4 @@
-import React from 'react'
+import BlurImage from '@/components/BlurImage'
 import { PrismicRichText } from '@prismicio/react'
 
 /**
@@ -7,29 +7,34 @@ import { PrismicRichText } from '@prismicio/react'
  * @param { ImageGridProps }
  */
 const ImageGrid = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
+  <section className="flex flex-col gap-4 p-4">
+    <div className="flex flex-col gap-1">
+      <div className="text-xl font-bold">
+        <PrismicRichText field={slice.primary.title} />
+      </div>
+      <div className="text-sm">
+        <PrismicRichText field={slice.primary.description} />
+      </div>
+    </div>
+    <div className="grid grid-cols-3 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
+      {slice.items.map((item) => (
+        <div
+          key={item.image.url}
+          className="group relative h-80 w-full overflow-hidden rounded-xl bg-black max-sm:h-60"
+        >
+          <div className="duration-300 group-hover:opacity-70">
+            <BlurImage src={item.image.url} />
+          </div>
+          {item.image.alt && (
+            <div className="absolute bottom-0 w-full rounded-xl bg-zinc-900/10 p-4 text-center text-sm font-semibold text-zinc-200 opacity-0 backdrop-blur-md duration-300 group-hover:opacity-100">
+              <h6 className="translate-y-1 duration-300 group-hover:translate-y-0">
+                {item.image.alt}
+              </h6>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
   </section>
 )
 

@@ -15,8 +15,8 @@ export default function BlurImage({ src }: BlurImageProps) {
       alt=""
       src={src}
       className={clsx(
-        'group-hover:opacity-75 duration-200 ease-in-out object-cover',
-        isLoading ? 'blur-xl scale-105' : 'blur-0 scale-100',
+        'duration-500 ease-in-out object-cover',
+        isLoading ? 'blur-xl scale-110' : 'blur-0 scale-100',
       )}
       onLoadingComplete={() => setLoading(false)}
     />

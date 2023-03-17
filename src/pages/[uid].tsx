@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { components } from '@@/slices'
 import * as prismicH from '@prismicio/helpers'
 import { SliceZone } from '@prismicio/react'
@@ -8,7 +9,16 @@ type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 type PageParams = { uid: string }
 
 export default function Page({ page }: PageProps) {
-  return <SliceZone slices={page?.data.slices} components={components} />
+  const title = page?.data.title
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <SliceZone slices={page?.data.slices} components={components} />
+    </>
+  )
 }
 
 export async function getStaticProps({

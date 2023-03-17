@@ -6,6 +6,7 @@ import { repositoryName } from '@/prismicio'
 // import { Inter } from 'next/font/google'
 import '@/styles/global.css'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -13,8 +14,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
       <PrismicPreview repositoryName={repositoryName}>
-        <Navbar />
-        <Component {...pageProps} />
+        <main className="flex min-h-[100vh] flex-col">
+          <Navbar />
+          <Component {...pageProps} />
+          <Footer />
+        </main>
       </PrismicPreview>
     </PrismicProvider>
   )
