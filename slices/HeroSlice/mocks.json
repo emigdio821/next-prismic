@@ -1,0 +1,78 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Organized"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Excepteur mollit dolore anim. Officia ut dolore eu ex consequat consectetur est ex adipisicing quis Lorem. Sit fugiat aliquip excepteur deserunt incididunt pariatur anim excepteur qui eu commodo ad aliquip minim."
+            }
+          }
+        ]
+      },
+      "image": {
+        "url": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyN3x8ZnJ1aXR8ZW58MHx8fHwxNjc5MDYyNzEz&ixlib=rb-4.0.3&q=80",
+        "origin": {
+          "id": "mjP6MQz834E",
+          "url": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyN3x8ZnJ1aXR8ZW58MHx8fHwxNjc5MDYyNzEz&ixlib=rb-4.0.3&q=80",
+          "width": 2940,
+          "height": 4417
+        },
+        "width": 2940,
+        "height": 4417,
+        "edit": {
+          "background": "transparent",
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "cta_link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ],
+          [
+            "cta_text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "cage",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]
