@@ -6,7 +6,8 @@
   "slices": {
     "HeroSlice": {
       "default": {
-        "items": {}
+        "items": {},
+        "primary": {}
       }
     },
     "ImageGrid": {}

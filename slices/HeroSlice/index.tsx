@@ -3,6 +3,7 @@ import {
   PrismicRichText,
   SliceComponentProps
 } from '@prismicio/react'
+import { components } from '@/prismicio'
 import BlurImage from '@/components/BlurImage'
 import type { Content } from '@prismicio/client'
 
@@ -12,15 +13,18 @@ const HeroSlice = ({ slice }: HeroProps) => (
   <section className="relative flex h-[500px] w-full items-center justify-center bg-zinc-900 p-6">
     <div className="absolute inset-0 overflow-hidden">
       {slice.primary.image.url && <BlurImage src={slice.primary.image.url} />}
-      <div className="absolute inset-0 bg-zinc-500 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-zinc-600 mix-blend-multiply duration-200 dark:bg-zinc-700" />
     </div>
-    <div className="relative flex flex-col items-center gap-6">
+    <div className="relative flex max-w-4xl flex-col items-center gap-6">
       <div className="flex flex-col items-center gap-1">
         <div className="text-3xl font-bold text-zinc-100">
           <PrismicRichText field={slice.primary.title} />
         </div>
         <div className="text-center text-base text-zinc-200">
-          <PrismicRichText field={slice.primary.description} />
+          <PrismicRichText
+            field={slice.primary.description}
+            components={components}
+          />
         </div>
       </div>
       {slice.items.length && (

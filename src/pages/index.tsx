@@ -10,7 +10,7 @@ export default function Home({ page }: PageProps) {
   return (
     <>
       <Head>
-        <title>PrismicNext</title>
+        <title>{page.data.title || 'Prismicool'}</title>
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </>
@@ -22,7 +22,7 @@ export async function getStaticProps({ previewData }: GetStaticPropsContext) {
   const page = await client.getSingle('homepage')
   return {
     props: {
-      page,
-    },
+      page
+    }
   }
 }

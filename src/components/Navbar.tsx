@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="mx-auto p-4">
         <div className="relative flex items-center justify-between">
           <div className="flex  items-center justify-center">
-            <h2 className="text-lg font-bold text-zinc-200">PrismicNext</h2>
+            <h2 className="text-lg font-bold text-zinc-200">Prismicool</h2>
           </div>
           {/* <Link
             href="/about"
