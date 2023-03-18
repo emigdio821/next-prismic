@@ -4,7 +4,7 @@ import ThemeBtn from './ThemeBtn'
 
 export default function Navbar() {
   return (
-    <nav className="absolute z-10 w-full bg-transparent">
+    <nav className="absolute z-[1] w-full bg-transparent">
       <div className="mx-auto p-4">
         <div className="relative flex items-center justify-between">
           <div className="flex  items-center justify-center">

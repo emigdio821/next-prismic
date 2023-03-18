@@ -14,11 +14,9 @@ export default function BlurImage({ src }: BlurImageProps) {
       fill
       alt=""
       src={src}
-      sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+      sizes="(max-width: 768px) 80vw, (max-width: 1200px) 100vw, 100vw"
       className={clsx(
-        'object-cover duration-500 ease-in-out group-hover:scale-105',
+        'rounded-[inherit] object-cover duration-500 ease-in-out group-hover:scale-105',
         isLoading ? 'scale-110 animate-pulse blur-md' : 'scale-100 blur-0'
       )}
       onLoadingComplete={() => setLoading(false)}
