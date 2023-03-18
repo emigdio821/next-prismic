@@ -37,18 +37,19 @@
         }
       },
       "items": {
-        "cta_link": {
+        "link": {
           "type": "Link",
           "config": {
-            "label": "CTA link",
+            "label": "Link",
             "placeholder": "",
+            "allowTargetBlank": false,
             "select": null
           }
         },
-        "cta_text": {
+        "linkText": {
           "type": "Text",
           "config": {
-            "label": "CTA text",
+            "label": "Link text",
             "placeholder": ""
           }
         }

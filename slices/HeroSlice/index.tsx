@@ -27,11 +27,11 @@ const HeroSlice = ({ slice }: HeroProps) => (
         <div className="flex gap-2">
           {slice.items.map((item) => (
             <PrismicLink
-              key={item.cta_text}
-              field={item.cta_link}
+              field={item.link}
+              key={item.linkText}
               className="rounded-full bg-zinc-200/70 py-2 px-4 text-sm font-semibold duration-200 hover:bg-zinc-200/90 dark:bg-zinc-800/70 dark:hover:bg-zinc-800/90"
             >
-              {item.cta_text}
+              {item.linkText}
             </PrismicLink>
           ))}
         </div>

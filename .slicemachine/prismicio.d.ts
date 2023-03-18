@@ -129,25 +129,25 @@ interface HeroSliceSliceDefaultPrimary {
  */
 export interface HeroSliceSliceDefaultItem {
     /**
-     * CTA link field in *HeroSlice → Items*
+     * Link field in *HeroSlice → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: hero_slice.items[].cta_link
+     * - **API ID Path**: hero_slice.items[].link
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    cta_link: prismicT.LinkField;
+    link: prismicT.LinkField;
     /**
-     * CTA text field in *HeroSlice → Items*
+     * Link text field in *HeroSlice → Items*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: hero_slice.items[].cta_text
+     * - **API ID Path**: hero_slice.items[].linkText
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    cta_text: prismicT.KeyTextField;
+    linkText: prismicT.KeyTextField;
 }
 /**
  * Default variation for HeroSlice Slice

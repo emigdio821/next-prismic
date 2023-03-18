@@ -9,7 +9,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Homepage",
+              "text": "Hero title",
               "spans": []
             },
             "direction": "ltr"
@@ -22,7 +22,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Hey!, this is a nice description from Prismic CMS. To be updated soon. Cheers!.",
+              "text": "Hero description",
               "spans": []
             },
             "direction": "ltr"
@@ -30,22 +30,22 @@
         ]
       },
       "image": {
-        "url": "https://images.unsplash.com/photo-1591287083773-9a52ba8184a4?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxOHx8ZnJ1aXR8ZW58MHx8fHwxNjc5MDYyNzEz&ixlib=rb-4.0.3&q=80",
         "origin": {
-          "id": "mrFdBdTlElk",
-          "url": "https://images.unsplash.com/photo-1591287083773-9a52ba8184a4?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxOHx8ZnJ1aXR8ZW58MHx8fHwxNjc5MDYyNzEz&ixlib=rb-4.0.3&q=80",
-          "width": 5304,
-          "height": 7952
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+          "width": 4024,
+          "height": 4024
         },
-        "width": 5304,
-        "height": 7952,
+        "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?rect=0%2C0%2C4024%2C4024&w=4024&h=4024",
+        "width": 4024,
+        "height": 4024,
         "edit": {
-          "background": "transparent",
           "zoom": 1,
           "crop": {
             "x": 0,
             "y": 0
-          }
+          },
+          "background": "transparent"
         },
         "credits": null,
         "alt": null,
@@ -58,7 +58,7 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "cta_link",
+            "link",
             {
               "__TYPE__": "LinkContent",
               "value": {
@@ -68,11 +68,11 @@
             }
           ],
           [
-            "cta_text",
+            "linkText",
             {
               "__TYPE__": "FieldContent",
-              "value": "cage",
-              "type": "Text"
+              "type": "Text",
+              "value": "Link"
             }
           ]
         ]
