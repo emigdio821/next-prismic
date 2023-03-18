@@ -9,8 +9,10 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Organized"
-            }
+              "text": "Homepage",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },
@@ -20,21 +22,23 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Excepteur mollit dolore anim. Officia ut dolore eu ex consequat consectetur est ex adipisicing quis Lorem. Sit fugiat aliquip excepteur deserunt incididunt pariatur anim excepteur qui eu commodo ad aliquip minim."
-            }
+              "text": "Hey!, this is a nice description from Prismic CMS. To be updated soon. Cheers!.",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },
       "image": {
-        "url": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyN3x8ZnJ1aXR8ZW58MHx8fHwxNjc5MDYyNzEz&ixlib=rb-4.0.3&q=80",
+        "url": "https://images.unsplash.com/photo-1591287083773-9a52ba8184a4?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxOHx8ZnJ1aXR8ZW58MHx8fHwxNjc5MDYyNzEz&ixlib=rb-4.0.3&q=80",
         "origin": {
-          "id": "mjP6MQz834E",
-          "url": "https://images.unsplash.com/photo-1564750497011-ead0ce4b9448?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyN3x8ZnJ1aXR8ZW58MHx8fHwxNjc5MDYyNzEz&ixlib=rb-4.0.3&q=80",
-          "width": 2940,
-          "height": 4417
+          "id": "mrFdBdTlElk",
+          "url": "https://images.unsplash.com/photo-1591287083773-9a52ba8184a4?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxOHx8ZnJ1aXR8ZW58MHx8fHwxNjc5MDYyNzEz&ixlib=rb-4.0.3&q=80",
+          "width": 5304,
+          "height": 7952
         },
-        "width": 2940,
-        "height": 4417,
+        "width": 5304,
+        "height": 7952,
         "edit": {
           "background": "transparent",
           "zoom": 1,
