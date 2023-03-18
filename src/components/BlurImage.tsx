@@ -19,7 +19,7 @@ export default function BlurImage({ src }: BlurImageProps) {
               33vw"
       className={clsx(
         'object-cover duration-500 ease-in-out group-hover:scale-105',
-        isLoading ? 'scale-110 blur-xl' : 'scale-100 blur-0'
+        isLoading ? 'scale-110 animate-pulse blur-md' : 'scale-100 blur-0'
       )}
       onLoadingComplete={() => setLoading(false)}
     />

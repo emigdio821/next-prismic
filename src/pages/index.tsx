@@ -7,11 +7,15 @@ import type { InferGetStaticPropsType, GetStaticPropsContext } from 'next'
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function Home({ page }: PageProps) {
+  const title = page.data.title
+
   return (
     <>
-      <Head>
-        <title>{page.data.title || 'Prismicool'}</title>
-      </Head>
+      {title && (
+        <Head>
+          <title>{title}</title>
+        </Head>
+      )}
       <SliceZone slices={page.data.slices} components={components} />
     </>
   )

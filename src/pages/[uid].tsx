@@ -13,9 +13,11 @@ export default function Page({ page }: PageProps) {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
+      {title && (
+        <Head>
+          <title>{title}</title>
+        </Head>
+      )}
       <SliceZone slices={page?.data.slices} components={components} />
     </>
   )
@@ -23,7 +25,7 @@ export default function Page({ page }: PageProps) {
 
 export async function getStaticProps({
   params,
-  previewData,
+  previewData
 }: GetStaticPropsContext<PageParams>) {
   const client = createClient({ previewData })
 
@@ -31,13 +33,13 @@ export async function getStaticProps({
     const page = await client.getByUID('page', params.uid)
     return {
       props: {
-        page,
-      },
+        page
+      }
     }
   }
 
   return {
-    props: {},
+    props: {}
   }
 }
 
@@ -47,6 +49,6 @@ export async function getStaticPaths() {
 
   return {
     paths: pages.map((page) => prismicH.asLink(page)),
-    fallback: false,
+    fallback: false
   }
 }
