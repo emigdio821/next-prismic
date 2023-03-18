@@ -20,13 +20,13 @@ const ImageGrid = ({ slice }) => (
       {slice.items.map((item) => (
         <div
           key={item.image.url}
-          className="group relative h-80 w-full overflow-hidden rounded-xl bg-black max-sm:h-60"
+          className="group relative h-80 w-full overflow-hidden rounded-xl bg-zinc-900 max-sm:h-60"
         >
-          <div className="duration-300 group-hover:opacity-70">
+          <div className="duration-300 group-hover:opacity-60">
             <BlurImage src={item.image.url} />
           </div>
           {item.image.alt && (
-            <div className="absolute bottom-0 w-full rounded-xl bg-zinc-900/10 p-4 text-center text-sm font-semibold text-zinc-200 opacity-0 backdrop-blur-md duration-300 group-hover:opacity-100">
+            <div className="absolute bottom-0 w-full bg-black/20 p-4 text-center text-sm font-semibold text-zinc-200 opacity-0 backdrop-blur-md duration-300 group-hover:opacity-100">
               <h6 className="translate-y-1 duration-300 group-hover:translate-y-0">
                 {item.image.alt}
               </h6>

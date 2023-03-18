@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
       <PrismicPreview repositoryName={repositoryName}>
-        <main className="flex min-h-[100vh] flex-col">
+        <main className="flex min-h-[100vh] flex-col text-zinc-800 dark:bg-zinc-900 dark:text-zinc-200">
           <Navbar />
           <Component {...pageProps} />
           <Footer />

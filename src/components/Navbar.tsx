@@ -1,15 +1,14 @@
 // import Link from 'next/link'
 import { FiGithub } from 'react-icons/fi'
+import ThemeBtn from './ThemeBtn'
 
 export default function Navbar() {
   return (
-    <nav className="bg-transparent absolute w-full z-10">
+    <nav className="absolute z-10 w-full bg-transparent">
       <div className="mx-auto p-4">
         <div className="relative flex items-center justify-between">
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
-              <h2 className="text-zinc-200 font-bold text-lg">PrismicNext</h2>
-            </div>
+          <div className="flex  items-center justify-center">
+            <h2 className="text-lg font-bold text-zinc-200">PrismicNext</h2>
           </div>
           {/* <Link
             href="/about"
@@ -17,15 +16,18 @@ export default function Navbar() {
           >
             About
           </Link> */}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/emigdio821/next-prismic"
-            className="flex gap-2 text-zinc-300 items-center text-sm bg-zinc-300/10 py-2 px-4 font-semibold rounded-md hover:bg-zinc-300/20"
-          >
-            <FiGithub />
-            Source
-          </a>
+          <div className="flex gap-2">
+            <ThemeBtn />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/emigdio821/next-prismic"
+              className="flex items-center gap-2 rounded-md bg-zinc-300/10 py-2 px-4 text-sm font-semibold text-zinc-300 hover:bg-zinc-300/20"
+            >
+              <FiGithub />
+              Source
+            </a>
+          </div>
         </div>
       </div>
     </nav>
