@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="text-zinc-800 duration-200 dark:bg-zinc-900 dark:text-zinc-200">
+      <body className="text-zinc-800 dark:bg-zinc-900 dark:text-zinc-200">
         <Main />
         <NextScript />
       </body>

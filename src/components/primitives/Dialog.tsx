@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { forwardRef } from 'react'
+import { forwardRef, ReactNode } from 'react'
 import { BiX } from 'react-icons/bi'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 
@@ -10,11 +10,20 @@ type DialogContentProps = {
   description?: string
   transparent?: boolean
   children: React.ReactNode
+  subTitle?: string | React.ReactNode
 } & React.ComponentProps<typeof DialogPrimitive.Content>
 
 export const DialogContent = forwardRef<HTMLDivElement, DialogContentProps>(
   (
-    { children, title, className, description, transparent, ...props },
+    {
+      children,
+      title,
+      subTitle,
+      className,
+      description,
+      transparent,
+      ...props
+    },
     forwardedRef
   ) => (
     <DialogPrimitive.Portal>
@@ -30,10 +39,13 @@ export const DialogContent = forwardRef<HTMLDivElement, DialogContentProps>(
         )}
       >
         {title && (
-          <DialogPrimitive.Title className="mb-2 text-lg font-semibold">
+          <DialogPrimitive.Title
+            className={clsx('text-lg font-semibold', { 'mb-2 ': !subTitle })}
+          >
             {title}
           </DialogPrimitive.Title>
         )}
+        {subTitle && <div className="mb-2 text-zinc-400">{subTitle}</div>}
         {description && (
           <DialogPrimitive.Description className="text-sm leading-tight opacity-70">
             {description}

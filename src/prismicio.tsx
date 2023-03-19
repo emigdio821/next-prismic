@@ -27,9 +27,9 @@ export const components: JSXMapSerializer = {
   hyperlink: ({ children, node: { data } }: Hyperlink) => (
     <a
       href={data.url}
+      className="link"
       target={data.target}
       rel={data.target ? 'noopener noreferrer' : undefined}
-      className="cursor-pointer underline-offset-4 hover:underline"
     >
       {children}
     </a>

@@ -15,7 +15,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/emigdio821/next-prismic"
-              className="flex items-center gap-2 rounded-md bg-zinc-300/10 py-2 px-4 text-sm font-semibold text-zinc-300 hover:bg-zinc-300/20"
+              className="flex items-center gap-2 rounded-md bg-zinc-300/10 py-2 px-4 text-sm font-semibold text-zinc-300 duration-200 hover:bg-zinc-300/20"
             >
               <FiGithub />
               Source

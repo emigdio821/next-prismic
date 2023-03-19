@@ -3,6 +3,8 @@ import {
   PrismicRichText,
   SliceComponentProps
 } from '@prismicio/react'
+import clsx from 'clsx'
+import { useRouter } from 'next/router'
 import { components } from '@/prismicio'
 import BlurImage from '@/components/BlurImage'
 import type { Content } from '@prismicio/client'
@@ -10,10 +12,21 @@ import type { Content } from '@prismicio/client'
 type HeroProps = SliceComponentProps<Content.HeroSliceSlice>
 
 export default function HeroSlice({ slice }: HeroProps) {
+  const router = useRouter()
+
   return (
-    <section className="relative flex h-[60vh] w-full items-center justify-center bg-zinc-900 p-6 max-sm:h-[100vh]">
+    <section
+      className={clsx(
+        'relative flex min-h-[400px] w-full items-center justify-center bg-zinc-900 p-6',
+        router.asPath === '/about'
+          ? 'h-[calc(100vh-91px)]'
+          : 'h-[60vh] max-sm:h-[100vh]'
+      )}
+    >
       <div className="absolute inset-0 overflow-hidden">
-        {slice.primary.image.url && <BlurImage src={slice.primary.image.url} />}
+        {slice.primary.image.url && (
+          <BlurImage src={slice.primary.image.url} priority />
+        )}
         <div className="absolute inset-0 bg-zinc-600 mix-blend-multiply duration-200 dark:bg-zinc-700" />
       </div>
       <div className="relative flex max-w-4xl flex-col items-center gap-6">
