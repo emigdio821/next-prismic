@@ -15,7 +15,7 @@ export default function ImageGrid({ slice }: ImageGridProps) {
           <PrismicRichText field={slice.primary.description} />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
+      <div className="grid grid-cols-4 gap-4 max-2xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1">
         {slice.items.map((item) => (
           <div
             key={item.image.url}
