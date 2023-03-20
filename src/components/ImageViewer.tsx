@@ -48,7 +48,7 @@ export default function ImageViewer({ url, title }: ImageViewerProps) {
           onInteractOutside={(e) => e.preventDefault()}
         >
           <div className="relative h-full w-full rounded-md shadow-2xl">
-            <BlurImage src={url} animation={false} />
+            <BlurImage src={url} />
           </div>
         </DialogContent>
       </Dialog>
